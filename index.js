@@ -8,7 +8,7 @@ document.querySelector('.root-nav').onclick = function (event) {
 }
 
 function closeAllSubMenu(current = null) {
-    let parents = [];
+    const parents = [];
     if (current) {
         let currentParent = current.parentNode;
 
@@ -21,7 +21,7 @@ function closeAllSubMenu(current = null) {
 
     const subMenu = document.querySelectorAll('.root-nav ul');
     Array.from(subMenu).forEach(item => {
-        if (item != current && !parents.includes(item)) {
+        if (item !=== current && !parents.includes(item)) {
             item.style.display = "none";
             item.classList.remove('sub-menu-active');
         } else {
